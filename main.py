@@ -12,9 +12,9 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 
 # Tentukan path ke file kredensial
-cred_path = "capstone-bangkit-2024-8a348fce7975.json"
+cred_path = "path/to/credetials.json"
 # Tentukan ID proyek
-os.environ["GOOGLE_CLOUD_PROJECT"] = "capstone-bangkit-2024"
+os.environ["GOOGLE_CLOUD_PROJECT"] = "your-project-id"
 
 # Inisialisasi autentikasi dan verifikasi kredensial
 credentials = service_account.Credentials.from_service_account_file(cred_path)
@@ -39,7 +39,7 @@ app = FastAPI()
 # Inisialisasi Vertex AI
 vertexai.init(project="1005631098859", location="us-central1")
 model = GenerativeModel(
-    "projects/1005631098859/locations/us-central1/endpoints/6475200997344935936"
+    "projects/your-project-id/locations/your-region/endpoints/your-endpoint-id"
 )
 
 # Model Pydantic untuk validasi input
