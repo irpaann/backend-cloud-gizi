@@ -1,0 +1,7 @@
+google-cloud-aiplatform >= 1.31.0
+flask
+google-cloud-logging
+fastapi
+pydantic
+uvicorn
+firebase-admin
