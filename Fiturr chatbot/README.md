@@ -63,14 +63,14 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
 2. *Uji Endpoint*
 
-   - `*POST /chatbot/*`
+   - `POST /chatbot/`
      ```bash
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
      -H "Content-Type: application/json" \
      -d '{"user_id": "user123", "prompt": "Halo!"}'
      
 
-   - `*GET /chatbot/history/*`
+   - `GET /chatbot/history/`
      ```bash
      curl -X GET "http://127.0.0.1:8000/chatbot/history/?user_id=user123"
      
@@ -179,4 +179,6 @@ Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request un
 
 ## Kontak
 
-Untuk pertanyaan atau dukungan, silakan hubungi c206b4ky200@bangkit.academy.# API Chatbot dengan FastAPI, Firebase, dan Vertex AI
+Untuk pertanyaan atau dukungan, silakan hubungi c206b4ky200@bangkit.academy. 
+
+# API Chatbot dengan FastAPI, Firebase, dan Vertex AI
