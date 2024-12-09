@@ -65,7 +65,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
 2. *Uji Endpoint*
    ```bash
-   - *POST /chatbot/*
+   - POST /chatbot/
      bash
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
     -H "Content-Type: application/json" \
@@ -73,7 +73,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
      
 
    - *GET /chatbot/history/*
-     bash
+     ```bash
      curl -X GET "http://127.0.0.1:8000/chatbot/history/?user_id=user123"
      
 
