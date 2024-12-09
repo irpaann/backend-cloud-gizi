@@ -37,7 +37,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
    
 
 3. *Instal Dependensi*
-   bash
+   ```bash
    pip install -r requirements.txt
    
 
@@ -46,7 +46,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
    - Perbarui cred_path dalam kode ke jalur file credentials.json Anda.
 
 5. *Setel Variabel Lingkungan*
-   bash
+   ```bash
    export GOOGLE_CLOUD_PROJECT="your-project-id"
    
 
@@ -59,12 +59,12 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
 1. *Jalankan Server FastAPI*
    bash
-   uvicorn main:app --reload
+   ```uvicorn main:app --reload
    
    API akan tersedia di http://127.0.0.1:8000.
 
 2. *Uji Endpoint*
-
+   ```bash
    - *POST /chatbot/*
      bash
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
