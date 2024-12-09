@@ -59,19 +59,19 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
 1. *Jalankan Server FastAPI*
    ```bash
-      uvicorn main:app --reload
-   API akan tersedia di http://127.0.0.1:8000.
+   uvicorn main:app --reload
+   // API akan tersedia di http://127.0.0.1:8000.
 
 2. *Uji Endpoint*
-   bash
-   - POST /chatbot/
+
+   - *POST /chatbot/*
      ```bash
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
     -H "Content-Type: application/json" \
     -d '{"user_id": "user123", "prompt": "Halo!"}'
      
 
-   - GET /chatbot/history/
+   - *GET /chatbot/history/*
      ```bash
      curl -X GET "http://127.0.0.1:8000/chatbot/history/?user_id=user123"
      
@@ -83,6 +83,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 ### POST /chatbot/
 - *Deskripsi*: Mengirimkan prompt pengguna ke chatbot dan mengembalikan respons.
 - *Request Body*:
+  ```bash
   json
   {
       "user_id": "string",
@@ -90,6 +91,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
   }
   
 - *Respons*:
+  ```bash
   json
   {
       "response": "string"
@@ -101,6 +103,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 - *Parameter Query*:
   - user_id: ID pengguna yang riwayat percakapannya ingin diambil.
 - *Respons*:
+```bash  
   json
   {
       "user_id": "string",
@@ -121,13 +124,13 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 ### Pengujian Unit
 
 1. **Instal pytest**
-   bash
+   ```bash
    pip install pytest
    
 
 2. *Buat Pengujian*
    Tambahkan file test_main.py di direktori proyek:
-   python
+   ```bash
    from fastapi.testclient import TestClient
    from main import app
 
@@ -145,7 +148,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
    
 
 3. *Jalankan Pengujian*
-   bash
+   ```bash
    pytest
    
 
