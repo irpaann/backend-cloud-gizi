@@ -1,39 +1,39 @@
 # API Chatbot dengan FastAPI, Firebase, dan Vertex AI
 
-Proyek ini adalah API chatbot yang dibangun menggunakan FastAPI dengan integrasi Firebase Firestore untuk menyimpan riwayat chat dan Vertex AI untuk menghasilkan respons chatbot. API ini memungkinkan pengguna untuk berinteraksi dengan chatbot dan melihat riwayat percakapan mereka.
+Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integrasi **Firebase Firestore** untuk menyimpan riwayat chat dan **Vertex AI** untuk menghasilkan respons chatbot. API ini memungkinkan pengguna untuk berinteraksi dengan chatbot dan melihat riwayat percakapan mereka.
 
 ---
 
 ## Fitur
 
-- *API Chatbot*: Mengirimkan prompt pengguna ke Vertex AI untuk menghasilkan respons.
-- *Integrasi Firestore*: Menyimpan riwayat percakapan di Firestore, diorganisasikan berdasarkan ID pengguna.
-- *Pengambilan Riwayat*: Mengambil riwayat percakapan untuk pengguna tertentu.
-- *Skalabilitas dan Keamanan*: Dibangun dengan FastAPI dan Firebase untuk memastikan performa dan integritas data.
+- **API Chatbot**: Mengirimkan prompt pengguna ke Vertex AI untuk menghasilkan respons.
+- **Integrasi Firestore**: Menyimpan riwayat percakapan di Firestore, diorganisasikan berdasarkan ID pengguna.
+- **Pengambilan Riwayat**: Mengambil riwayat percakapan untuk pengguna tertentu.
+- **Skalabilitas dan Keamanan**: Dibangun dengan FastAPI dan Firebase untuk memastikan performa dan integritas data.
 
 ---
 
 ## Prasyarat
 
 - Python 3.9 atau lebih tinggi
-- Proyek Google Cloud dengan Vertex AI dan Firestore diaktifkan
-- File kredensial Firebase Admin SDK (credentials.json)
+- Proyek Google Cloud dengan **Vertex AI** dan **Firestore** diaktifkan
+- File kredensial **Firebase Admin SDK** (`credentials.json`)
 - FastAPI dan pustaka Python yang diperlukan sudah diinstal
 
 ---
 
 ## Instalasi
 
-1. *Kloning Repository*
-   bash
+1. **Kloning Repository**
+   ```bash
    git clone https://github.com/irpaann/backend-cloud-gizi.git
    cd backend-cloud-gizi/Fitur chatbot
-   
 
 2. *Buat Virtual Environment*
    bash
    python -m venv venv
    source venv/bin/activate  # Di Windows, gunakan `venv\Scripts\activate`
+
    
 
 3. *Instal Dependensi*
@@ -68,8 +68,8 @@ Proyek ini adalah API chatbot yang dibangun menggunakan FastAPI dengan integrasi
    - *POST /chatbot/*
      bash
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
-     -H "Content-Type: application/json" \
-     -d '{"user_id": "user123", "prompt": "Halo!"}'
+    -H "Content-Type: application/json" \
+    -d '{"user_id": "user123", "prompt": "Halo!"}'
      
 
    - *GET /chatbot/history/*
