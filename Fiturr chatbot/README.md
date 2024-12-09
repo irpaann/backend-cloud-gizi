@@ -101,7 +101,8 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 ### GET /chatbot/history/
 - *Deskripsi*: Mengambil riwayat percakapan untuk pengguna tertentu.
 - *Parameter Query*:
-  - user_id: ID pengguna yang riwayat percakapannya ingin diambil.
+     ```bash
+  user_id: ## ID pengguna yang riwayat percakapannya ingin diambil.
 - *Respons*:
    ```bash  
   json
