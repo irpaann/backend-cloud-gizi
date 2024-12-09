@@ -103,7 +103,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 - *Parameter Query*:
   - user_id: ID pengguna yang riwayat percakapannya ingin diambil.
 - *Respons*:
-```bash  
+   ```bash  
   json
   {
       "user_id": "string",
