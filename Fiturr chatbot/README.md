@@ -30,7 +30,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
    cd backend-cloud-gizi/Fitur chatbot
 
 2. *Buat Virtual Environment*
-   bash
+   ```bash
    python -m venv venv
    source venv/bin/activate  # Di Windows, gunakan `venv\Scripts\activate`
 
