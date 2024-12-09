@@ -38,6 +38,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
 3. *Instal Dependensi*
    ```bash
+   `python`
    pip install -r requirements.txt
    
 
@@ -65,6 +66,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 
    - `POST /chatbot/`
      ```bash
+     `json`
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
      -H "Content-Type: application/json" \
      -d '{"user_id": "user123", "prompt": "Halo!"}'
@@ -83,7 +85,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 - *Deskripsi*: Mengirimkan prompt pengguna ke chatbot dan mengembalikan respons.
 - `*Request Body*`:
   ```bash
-  json
+  `json`
   {
       "user_id": "string",
       "prompt": "string"
@@ -104,7 +106,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
   user_id: ## ID pengguna yang riwayat percakapannya ingin diambil.
 - *Respons*:
    ```bash  
-  json
+  `json`
   {
       "user_id": "string",
       "chat_history": [
@@ -131,6 +133,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 2. *Buat Pengujian*
    Tambahkan file test_main.py di direktori proyek:
    ```bash
+   `python`
    from fastapi.testclient import TestClient
    from main import app
 
