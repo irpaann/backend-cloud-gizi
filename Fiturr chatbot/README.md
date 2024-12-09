@@ -58,8 +58,8 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 ## Menjalankan API
 
 1. *Jalankan Server FastAPI*
-   bash
-   ```uvicorn main:app --reload
+   ```bash
+   uvicorn main:app --reload
    
    API akan tersedia di http://127.0.0.1:8000.
 
@@ -72,8 +72,8 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
     -d '{"user_id": "user123", "prompt": "Halo!"}'
      
 
-   - *GET /chatbot/history/*
-     ```bash
+   - GET /chatbot/history/
+     bash
      curl -X GET "http://127.0.0.1:8000/chatbot/history/?user_id=user123"
      
 
