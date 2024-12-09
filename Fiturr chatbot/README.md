@@ -34,13 +34,9 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
    python -m venv venv
    source venv/bin/activate  # Di Windows, gunakan `venv\Scripts\activate`
 
-   
-
 3. *Instal Dependensi*
    ```bash
-   `python`
    pip install -r requirements.txt
-   
 
 4. *Konfigurasi Kredensial Firebase*
    - Tambahkan file kredensial Firebase Admin SDK Anda ke direktori proyek.
@@ -49,7 +45,6 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 5. *Setel Variabel Lingkungan*
    ```bash
    export GOOGLE_CLOUD_PROJECT="your-project-id"
-   
 
 6. *Inisialisasi Firestore dan Vertex AI*
    Pastikan Firestore dan Vertex AI telah dikonfigurasi dengan benar di proyek Google Cloud Anda.
@@ -69,12 +64,10 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
      curl -X POST "http://127.0.0.1:8000/chatbot/" \
      -H "Content-Type: application/json" \
      -d '{"user_id": "user123", "prompt": "Halo!"}'
-     
 
    - `GET /chatbot/history/`
      ```bash
      curl -X GET "http://127.0.0.1:8000/chatbot/history/?user_id=user123"
-     
 
 ---
 
@@ -94,7 +87,7 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
   {
       "response": "string"
   }
-  
+
 
 ### GET /chatbot/history/
 - *Deskripsi*: Mengambil riwayat percakapan untuk pengguna tertentu.
@@ -113,7 +106,6 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
           }
       ]
   }
-  
 
 ---
 
@@ -124,7 +116,6 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
 1. **Instal pytest**
    ```bash
    pip install pytest
-   
 
 2. *Buat Pengujian*
    Tambahkan file test_main.py di direktori proyek:
@@ -143,12 +134,11 @@ Proyek ini adalah API chatbot yang dibangun menggunakan **FastAPI** dengan integ
        response = client.get("/chatbot/history/?user_id=testuser")
        assert response.status_code == 200
        assert "chat_history" in response.json()
-   
 
 3. *Jalankan Pengujian*
    ```bash
    pytest
-   
+
 
 ### Pengujian Manual
 
