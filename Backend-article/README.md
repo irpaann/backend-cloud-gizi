@@ -1,6 +1,6 @@
-# Article Backend Service
+# Article Backend Service GIZI
 
-Backend service ini menyediakan berbagai fungsi untuk pengelolaan artikel, termasuk membuat, membaca, memperbarui, dan menghapus artikel. Selain itu, Anda dapat mengambil berita dari NewsAPI dan menyimpannya ke database.
+Backend service ini menyediakan berbagai fungsi untuk pengelolaan artikel, termasuk membuat, membaca, memperbarui, dan menghapus artikel.
 
 URL base service ini adalah:  
 `https://article-capstone-1005631098859.asia-southeast2.run.app`
@@ -21,6 +21,22 @@ URL base service ini adalah:
 ### **2. POST `/article/create`**
 - **Deskripsi:**  
   Endpoint untuk membuat artikel baru secara manual.
+
+- **Contoh Data yang dikirim:**
+  ```json
+   {
+    "title": "Judul Artikel",
+    "author": "Penulis Artikel",
+    "description": "Deskripsi Artikel",
+    "category": "Kategori Artikel",
+    "content": "Konten Artikel",
+    "publishedAt": "Tanggal Publikasi",
+    "source": { "name": "Sumber Artikel" },
+    "url": "URL Artikel",
+    "urlToImage": "URL Gambar Artikel"
+    }
+
+  
 - **Respon Sukses:**
   ```json
   {
@@ -35,8 +51,8 @@ URL base service ini adalah:
     "source": { "name": "Sumber Artikel" },
     "url": "URL Artikel",
     "urlToImage": "URL Gambar Artikel"
+    }
   }
-}
 
 - **Respon Error:**
   ```json
@@ -68,8 +84,17 @@ URL base service ini adalah:
 ### **4. PUT `/articles/:id`**
 - **Deskripsi:**  
   Endpoint untuk memperbarui artikel berdasarkan ID.
+  
 - **Data yang Dikirim:**  
   Data yang ingin diperbarui dalam format JSON.
+  
+- **Contoh Data yang Dikirim:**  
+  Data yang ingin diperbarui dalam format JSON.
+  ```json
+  {
+  "title": "Judul Artikel Update",
+  "author": "Penulis Artikel Update"
+  }
 - **Respon Sukses:**
   ```json
   { 
